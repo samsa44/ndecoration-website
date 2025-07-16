@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تواصل بنا|ورشة نايف للحدادة والديكور</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Tajawal', Tahoma, Arial, sans-serif;
+      background: #f7f7f7;
+      color: #222;
+    }
+    .contact-hero {
+      background: linear-gradient(90deg, #19191a 60%, #232323 100%);
+      color: #fff;
+      padding: 50px 10px 30px 10px;
+      text-align: center;
+    }
+    .contact-hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 12px;
+      letter-spacing: 2px;
+    }
+    .contact-hero p {
+      font-size: 1.15rem;
+      color: #ffd700;
+      margin: 0;
+    }
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1100px;
+      margin: 40px auto;
+      gap: 40px;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 0 15px;
+    }
+    .contact-form {
+      flex: 1 1 340px;
+      background: #fff;
+      padding: 32px 24px;
+      border-radius: 14px;
+      box-shadow: 0 2px 12px #0002;
+      min-width: 320px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .contact-form label {
+      color: #19191a;
+      margin-bottom: 6px;
+      font-size: 1rem;
+      display: block;
+      text-align: right;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+      background: #f7f7f7;
+      font-size: 1rem;
+      margin-bottom: 12px;
+      box-sizing: border-box;
+      direction: rtl;
+      transition: border 0.2s;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border: 1.5px solid #ffd700;
+      outline: none;
+    }
+    .contact-form button {
+      background: #ffd700;
+      color: #19191a;
+      border: none;
+      padding: 12px 0;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.2s, color 0.2s;
+    }
+    .contact-form button:hover {
+      background: #19191a;
+      color: #ffd700;
+    }
+    .contact-info {
+      flex: 1 1 340px;
+      background: #19191a;
+      color: #fff;
+      border-radius: 14px;
+      box-shadow: 0 2px 12px #0002;
+      min-width: 320px;
+      padding: 32px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 18px;
+      align-items: flex-start;
+    }
+    .contact-info h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #ffd700;
+    }
+    .contact-info p {
+      font-size: 1.1rem;
+      margin: 0 0 10px 0;
+      color: #fff;
+    }
+    .contact-info .info-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.08em;
+      color: #ffd700;
+      margin-bottom: 6px;
+    }
+    .contact-info .info-item span {
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+    .contact-info .cta-btn {
+      margin-top: 18px;
+      background: #ffd700;
+      color: #19191a;
+      border: none;
+      border-radius: 6px;
+      padding: 12px 30px;
+      font-size: 1.1em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .contact-info .cta-btn:hover {
+      background: #fff;
+      color: #19191a;
+      border: 1.5px solid #ffd700;
+    }
+    @media (max-width: 900px) {
+      .contact-container { flex-direction: column; align-items: stretch; gap: 24px; }
+      .contact-info { padding-right: 0; text-align: center; align-items: center; }
+    }
+    @media (max-width: 600px) {
+      .contact-hero { padding: 30px 5px 15px 5px; }
+      .contact-container { gap: 12px; }
+      .contact-form, .contact-info { min-width: 0; }
+    }
+  </style>
+</head>
+<body>
+  <section class="contact-hero">
+    <h1>تواصل معنا</h1>
+    <p>نحن هنا دائمًا للإجابة على استفساراتكم ودعمكم في أي وقت.</p>
+  </section>
+  <div class="contact-container">
+<form class="contact-form" autocomplete="off">
+      <label for="name">الاسم</label>
+      <input type="text" id="name" name="name" required placeholder="اكتب اسمك">
+
+      <label for="email">البريد الإلكتروني</label>
+      <input type="email" id="email" name="email" required placeholder="example@email.com">
+
+      <label for="message">رسالتك</label>
+      <textarea id="message" name="message" rows="4" required placeholder="كيف يمكننا مساعدتك؟"></textarea>
+
+      <button type="submit">إرسال</button>
+    </form>
+    <div class="contact-info">
+      <h2>معلومات التواصل</h2>
+      <div class="info-item"><span>📧</span> <a href="mailto:naifsaudi200ff@gmail.com" style="color:#ffd700; text-decoration:none;">naifsaudi200ff@gmail.com</a></div>
+      <div class="info-item"><span>📞</span> <a href="tel:+966553717543" style="color:#ffd700; text-decoration:none;">+966 55 371 7543</a></div>
+      <div class="info-item"><span>📍</span> حي العاقول، المدينة المنورة، المملكة العربية السعودية</div>
+      <p>ساعات العمل: 9 صباحاً - 7 مساءً</p>
+      <!-- Call-to-action button (Choose one or both) -->
+      <a href="mailto:naifsaudi200ff@gmail.com" class="cta-btn">راسلنا عبر البريد</a>
+      <!-- Or WhatsApp button:
+      <a href="https://wa.me/966553717543" class="cta-btn" target="_blank">تواصل عبر واتساب</a>
+      -->
+    </div>
+  </div>
+</body>
+</html>
