@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> الخدمات| ورشة نايف للحدادة والديكور </title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Tajawal', Tahoma, Arial, sans-serif;
+      background: #f7f7f7;
+      color: #222;
+    }
+    /* Navbar */
+    .navbar {
+      background: #19191a;
+      padding: 0;
+      box-shadow: 0 2px 8px #0001;
+    }
+    .navbar ul {
+      margin: 0;
+      padding: 0 40px;
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      gap: 40px;
+      height: 60px;
+      align-items: center;
+    }
+    .navbar li {
+      color: #fff;
+      font-size: 1.1rem;
+      cursor: pointer;
+      position: relative;
+      transition: color 0.2s;
+    }
+    .navbar li.active,
+    .navbar li:hover {
+      color: #ffd700;
+    }
+    .navbar li.active::after {
+      content: '';
+      display: block;
+      margin: 0 auto;
+      margin-top: 4px;
+      width: 70%;
+      border-bottom: 2.5px solid #ffd700;
+      border-radius: 2px;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 60px 10px 30px 10px;
+      background: linear-gradient(90deg, #19191a 60%, #232323 100%);
+      color: #fff;
+    }
+    .hero h1 {
+      font-size: 2.7rem;
+      margin-bottom: 18px;
+      letter-spacing: 2px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 0;
+      color: #ffd700;
+    }
+
+    /* Products Section */
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin: 40px auto 0 auto;
+      max-width: 1200px;
+      padding: 0 15px;
+    }
+    .topic-card {
+      width: 290px;
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 2px 12px #0002;
+      text-align: center;
+      overflow: hidden;
+      transition: transform 0.18s;
+    }
+    .topic-card:hover {
+      transform: translateY(-7px) scale(1.03);
+      box-shadow: 0 4px 18px #0003;
+    }
+    .topic-card img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      border-top-left-radius: 14px;
+      border-top-right-radius: 14px;
+    }
+    .topic-title {
+      font-size: 1.15rem;
+      font-weight: bold;
+      margin: 18px 0 7px 0;
+      color: #19191a;
+    }
+    .topic-desc {
+      color: #555;
+      font-size: 1em;
+      padding: 0 16px 18px 16px;
+      min-height: 60px;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      background: linear-gradient(90deg, #19191a 60%, #232323 100%);
+      padding: 60px 0;
+      margin-top: 50px;
+      color: #fff;
+    }
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1100px;
+      margin: 0 auto;
+      gap: 40px;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 0 15px;
+    }
+    .contact-form {
+      flex: 1 1 340px;
+      background: rgba(255,255,255,0.04);
+      padding: 32px 24px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px #0002;
+      min-width: 320px;
+    }
+    .contact-form label {
+      color: #fff;
+      margin-bottom: 6px;
+      font-size: 1rem;
+      display: block;
+      text-align: right;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 6px;
+      border: none;
+      background: #f7f7f7;
+      font-size: 1rem;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+      direction: rtl;
+    }
+    .contact-form button {
+      background: #ffd700;
+      color: #19191a;
+      border: none;
+      padding: 12px 0;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      margin-top: 8px;
+      font-weight: bold;
+      transition: background 0.2s, color 0.2s;
+    }
+    .contact-form button:hover {
+      background: #19191a;
+      color: #ffd700;
+    }
+    .contact-info {
+      flex: 1 1 340px;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-right: 32px;
+      min-width: 320px;
+    }
+    .contact-info h2 {
+      font-size: 2.1rem;
+      margin-bottom: 18px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    .contact-info p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #ffd700;
+    }
+    .contact-info .details {
+      margin-top: 28px;
+      color: #fff;
+      font-size: 1.05em;
+      line-height: 2;
+    }
+    @media (max-width: 900px) {
+      .cards-container { gap: 18px; }
+      .contact-container { flex-direction: column; align-items: stretch; gap: 24px; }
+      .contact-info { padding-right: 0; text-align: center; }
+    }
+    @media (max-width: 600px) {
+      .navbar ul { gap: 18px; height: 50px; padding: 0 10px; }
+      .hero { padding: 40px 5px 20px 5px; }
+      .cards-container { gap: 12px; }
+      .topic-card { width: 95vw; max-width: 340px; }
+      .contact-section { padding: 25px 0; }
+      .contact-form, .contact-info { min-width: 0; }
+    }
+  </style>
+</head>
+ <!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>ورشة نايف للحدادة والديكور</title>
+  <style>
+    .nav-link {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: color 0.2s;
+      position: relative;
+    }
+    .nav-link.active,
+    .nav-link:hover {
+      color: #ffd700;
+    }
+    .nav-link.active::after {
+      content: '';
+      display: block;
+      margin: 0 auto;
+      margin-top: 4px;
+      width: 70%;
+      border-bottom: 2.5px solid #ffd700;
+      border-radius: 2px;
+    }
+    nav {
+      background: #19191a;
+      padding: 0;
+      box-shadow: 0 2px 8px #0001;
+    }
+    nav ul {
+      margin: 0;
+      padding: 0 40px;
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      gap: 40px;
+      height: 60px;
+      align-items: center;
+    }
+    nav li {
+      list-style: none;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html" class="nav-link ">الرئيسية</a></li>
+      <li><a href="services.html" class="nav-link active">الخدمات</a></li>
+      <li><a href="contacts.html" class="nav-link">تواصل بنا</a></li>
+    </ul>
+  </nav>
+</body>
+</html>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1 style="margin-bottom: 95px;"> الخدمات</h1>
+    <p style="line-height: 10px; margin-inline-start: 20px;"> .نقدم مجموعة كاملة من الخدمات والمنتجات عالية الجودة والتصميم حسب الطلب لتلبية احتياجاتكم </p>
+  </section>
+  <h1 style="font-size: 30px; text-align: center; margin-top: 50px;"> الخدمات والمنتجات </h1>
+  <!-- Products Section -->
+  <div class="cards-container">
+    <div class="topic-card">
+      <img src="c:\Users\dell\Desktop\3.jpg.jpg" alt="نوافذ حديدية">
+      <div class="topic-title">نوافذ حديدية</div>
+      <div class="topic-desc">تتميز النوافذ الحديدية بقوة استثنائية وجمالية خالدة، مما يوفر متانة وأمانًا فائقين مقارنةً بالمواد الأخرى.</div>
+    </div>
+    <div class="topic-card">
+      <img src="c:\Users\dell\Desktop\5.jpg.jpg" alt="ابواب حديدية">
+      <div class="topic-title">أبواب حديدية</div>
+      <div class="topic-desc">تتميز الأبواب الحديدية بقوتها العالية وأمانها الكبير، فهي توفر حماية فعالة من الاقتحام والحرائق والظروف الجوية القاسية.</div>
+    </div>
+    <div class="topic-card">
+      <img src="c:\Users\dell\Desktop\4.jpg.jpg" alt="نوافذ الألمنيوم">
+      <div class="topic-title">نوافذ الألمنيوم</div>
+      <div class="topic-desc">يتميز الألمنيوم لدينا بمتانته الاستثنائية وقدرته على مقاومة الصدأ والتآكل. كما يوفر أداءً موثوقًا وكفاءة طاقة مُحسّنة.</div>
+    </div>
+    <div class="topic-card">
+      <img src="c:\Users\dell\Desktop\1.jpg.jpg" alt="ابواب الألمنيوم">
+      <div class="topic-title">أبواب الألمنيوم</div>
+      <div class="topic-desc">تجمع أبواب الألمنيوم بين المتانة والمظهر العصري الأنيق، مع مقاومة ممتازة للصدأ والتآكل.</div>
+    </div>
+    <div class="topic-card">
+      <img src="c:\Users\dell\Desktop\6.jpg.jpg" alt="أبواب خشبية">
+      <div class="topic-title">أبواب خشبية</div>
+      <div class="topic-desc">أضف لمسة طبيعية لمنزلك مع تصاميم خشبية عصرية وجودة عالية.</div>
+    </div>
+    <div class="topic-card">
+      <img src="c:\Users\dell\Desktop\2.jpg.jpg" alt="نوافذ خشبية">
+      <div class="topic-title">نوافذ خشبية</div>
+      <div class="topic-desc">تصاميم عصرية بروح الطبيعة، تمنح منزلك دفئًا وأناقة.</div>
+    </div>
+  </div>
+  
